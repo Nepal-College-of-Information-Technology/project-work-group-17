@@ -74,8 +74,9 @@ git commit -m "feat: Implement <brief description>"
 git push origin feature/<your-name>-<task>
 4️⃣ Open a Pull Request (PR) against dev
 5️⃣ Review and merge after approval & testing
-
+```
 🚀 Getting Started (Local Setup)
+```
 1️⃣ Clone & Setup
 bash
 Copy
@@ -84,6 +85,8 @@ git clone https://github.com/<your-org>/workout-meal-planner.git
 cd workout-meal-planner
 git checkout dev
 git pull origin dev
+```
+```
 2️⃣ Frontend Setup
 bash
 Copy
@@ -91,6 +94,8 @@ Edit
 cd frontend
 npm install
 npm start      # Runs on http://localhost:3000
+```
+```
 3️⃣ Backend Setup
 bash
 Copy
@@ -106,6 +111,8 @@ venv\Scripts\activate       # Windows
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver  # Runs on http://localhost:8000
+```
+```
 🛠️ API Endpoints
 Endpoint	Method	Description
 /api/workouts/	GET	List all workout plans
@@ -113,7 +120,8 @@ Endpoint	Method	Description
 /api/progress/	GET	User's weight progress
 /api/progress/	POST	Add new progress entry
 /api/user/	GET/POST	User data (BMI info, etc)
-
+```
+```
 🏗️ Technology Stack
 Frontend:
 
@@ -130,18 +138,14 @@ Backend:
 Django + Django REST Framework
 
 SQLite (development) → can migrate to PostgreSQL for production
-
-Deployment:
-
-Frontend: Netlify or Vercel
-
-Backend: Heroku or Render
-
+```
+```
 🤝 Team Members
 Prashanna Chand — Backend Developer (Django REST API)
 
 Binita Pokhrel — Frontend Developer (React)
-
+```
+```
 🤝 Contributing
 Create feature branches off dev for each task
 
@@ -153,3 +157,4 @@ Keep dev stable at all times
 
 Merge to main only when preparing release builds
 
+```
