@@ -53,26 +53,27 @@ Our team follows a **main + dev** branch strategy:
 ### Feature Branch Workflow
 
 1️⃣ Always start by pulling latest `dev`:
-
-```bash
+bash
 git fetch origin
 git checkout dev
 git pull origin dev
-2️⃣ Create a feature branch:
 
+2️⃣ Create a feature branch:
 bash
 Copy
 Edit
 git checkout -b feature/<your-name>-<task>
-3️⃣ Work on your feature → stage, commit, and push:
 
+3️⃣ Work on your feature → stage, commit, and push:
 bash
 Copy
 Edit
 git add .
 git commit -m "feat: Implement <brief description>"
 git push origin feature/<your-name>-<task>
+
 4️⃣ Open a Pull Request (PR) against dev
+
 5️⃣ Review and merge after approval & testing
 ```
 🚀 Getting Started (Local Setup)
@@ -81,8 +82,8 @@ git push origin feature/<your-name>-<task>
 bash
 Copy
 Edit
-git clone https://github.com/<your-org>/workout-meal-planner.git
-cd workout-meal-planner
+git clone https://github.com/PrashannaChand/Byayamshala.git
+cd Byayamshala
 git checkout dev
 git pull origin dev
 ```
