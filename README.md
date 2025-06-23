@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # 💪 Workout & Meal Planner App
 
@@ -167,3 +168,6 @@ python manage.py runserver  # Runs on http://localhost:8000
 - Merge to `main` only when preparing production releases
 
 ---
+=======
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/trwb_8GS)
+>>>>>>> 2ff8950c4a5e062f466b8ffc4e5e209868275529
