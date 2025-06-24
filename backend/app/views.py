@@ -70,12 +70,6 @@ def login_view(request):
 
 @api_view(['GET', 'POST'])
 def user_list_create(request):
-    # Handle GET request (read users)
-    # if request.method == 'GET':
-    #     print(request.data)
-    #     users = User_details.objects.all()
-    #     serializer = UserDetailsSerializer(users, many=True)
-    #     return Response(serializer.data)
 
     # Handle POST request (create user)
     if request.method == 'POST':
