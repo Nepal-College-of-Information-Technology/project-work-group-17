@@ -23,7 +23,6 @@ class UserManager(BaseUserManager):
         return self.create_user(username, email, password, **extra_fields)
 
 class User(AbstractUser):
-    isPremiumUser = models.BooleanField(default=False)
 
     objects = UserManager()
 
