@@ -96,7 +96,7 @@ def user_fetch(request):
 
 
 @csrf_exempt
-#@api_view(['POST'])
+@api_view(['POST'])
 def predict(request):
     if request.method == 'POST':
         try:
