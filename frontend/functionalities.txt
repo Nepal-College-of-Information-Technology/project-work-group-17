@@ -1,0 +1,146 @@
+show homepage if not logged in and all
+
+show options in nav bar even if not logged in : BMI, home,diet and login/logout(depends on condition),register.
+
+logged out features: 
+ BMI
+
+ logged in features:
+ diet
+ workout plans
+ targeted exercise
+
+
+ Diet: as a recommendation diney 
+
+
+ workout plans: 
+        💪 1. Push–Pull–Legs (PPL) — 6-day split
+        Best for: Balanced hypertrophy, repeatable every week
+
+        Day	Workout
+        Day 1	Push (Chest, Shoulders, Triceps)
+        Day 2	Pull (Back, Biceps)
+        Day 3	Legs (Quads, Hamstrings, Glutes, Calves)
+        Day 4	Push
+        Day 5	Pull
+        Day 6	Legs
+        Day 7	Rest
+
+        🏋️‍♂️ 2. Bro Split — 5-day muscle group isolation
+        Best for: Maximum focus per muscle group
+
+        Day	Workout
+        Day 1	Chest
+        Day 2	Back
+        Day 3	Shoulders
+        Day 4	Legs
+        Day 5	Arms (Biceps + Triceps)
+        Day 6	Optional Cardio/Abs
+        Day 7	Rest
+
+        🧱 3. Upper–Lower Split — 4-day plan
+        Best for: Strength & hypertrophy balance
+
+        Day	Workout
+        Day 1	Upper Body
+        Day 2	Lower Body
+        Day 3	Rest
+        Day 4	Upper Body
+        Day 5	Lower Body
+        Day 6	Active Rest/Abs/Cardio
+        Day 7	Rest
+
+        🌀 4. Back–Biceps, Chest–Triceps, Legs–Shoulders–Abs — 3-day full body rotation
+        Best for: Intermediate bodybuilders
+
+        Day	Workout
+        Day 1	Back + Biceps
+        Day 2	Chest + Triceps
+        Day 3	Legs + Shoulders + Abs
+        Day 4	Rest
+        Day 5–7	Repeat or split across week
+
+        You can rotate or rest in between based on recovery.
+
+        🔁 5. Full-Body Split — 3 or 4 days a week
+        Best for: Beginners or time-constrained routines
+
+        Day	Workout
+        Day 1	Full Body (Compound focus)
+        Day 2	Rest or Cardio
+        Day 3	Full Body (Different variation)
+        Day 4	Rest
+        Day 5	Full Body
+        Day 6	Optional Abs/Cardio
+        Day 7	Rest
+
+Targeted Exercise: 
+🧱 Chest
+Exercise	Type	Equipment
+Bench Press	Compound	Barbell
+Incline Dumbbell Press	Compound	Dumbbell
+Chest Dips	Compound	Bodyweight/Dip Bar
+Push-Ups	Compound	Bodyweight
+Dumbbell Flyes	Isolation	Dumbbell/Bench
+Cable Crossovers	Isolation	Cable Machine
+
+💪 Back
+Exercise	Type	Equipment
+Pull-Ups / Chin-Ups	Compound	Bodyweight
+Barbell Deadlifts	Compound	Barbell
+Barbell Rows	Compound	Barbell
+Lat Pulldown	Compound	Machine
+Dumbbell Rows	Compound	Dumbbell/Bench
+Seated Cable Rows	Compound	Cable Machine
+Face Pulls	Isolation	Cable
+
+💪 Biceps
+Exercise	Type	Equipment
+Barbell Curls	Isolation	Barbell
+Dumbbell Curls	Isolation	Dumbbells
+Concentration Curls	Isolation	Dumbbell
+Preacher Curls	Isolation	EZ Bar/Machine
+Hammer Curls	Isolation	Dumbbells
+Cable Curls	Isolation	Cable
+
+💪 Triceps
+Exercise	Type	Equipment
+Close-Grip Bench Press	Compound	Barbell
+Dips (Triceps Focus)	Compound	Bodyweight
+Skull Crushers (Lying Triceps Extensions)	Isolation	Barbell/EZ Bar
+Overhead Triceps Extensions	Isolation	Dumbbell/Cable
+Triceps Pushdowns	Isolation	Cable
+Kickbacks	Isolation	Dumbbell
+
+🦵 Legs (Quads, Hamstrings, Glutes, Calves)
+Exercise	Type	Equipment
+Barbell Squats	Compound	Barbell
+Romanian Deadlifts	Compound	Barbell
+Leg Press	Compound	Machine
+Walking Lunges	Compound	Bodyweight/Dumbbell
+Leg Curls	Isolation	Machine
+Leg Extensions	Isolation	Machine
+Standing Calf Raises	Isolation	Machine/Bodyweight
+Seated Calf Raises	Isolation	Machine
+Hip Thrusts	Compound	Barbell/Bodyweight
+
+🧠 Shoulders (Deltoids)
+Exercise	Type	Equipment
+Overhead Press / Military Press	Compound	Barbell/Dumbbell
+Arnold Press	Compound	Dumbbell
+Lateral Raises	Isolation	Dumbbell
+Front Raises	Isolation	Dumbbell/Plate
+Rear Delt Flyes	Isolation	Dumbbell/Cable
+Face Pulls	Isolation	Cable
+Upright Rows	Compound	Barbell/Cable
+
+🔥 Abs (Core)
+Exercise	Type	Equipment
+Planks	Isometric	Bodyweight
+Hanging Leg Raises	Isolation	Bar/Dip Station
+Bicycle Crunches	Isolation	Bodyweight
+Russian Twists	Isolation	Bodyweight/Plate
+Cable Crunches	Isolation	Cable
+Ab Rollouts	Isolation	Ab Wheel
+Mountain Climbers	Cardio/Core	Bodyweight
