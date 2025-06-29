@@ -24,3 +24,4 @@ def health_check(request):
         'message': 'Method not allowed'
     }, status=405)
 
+

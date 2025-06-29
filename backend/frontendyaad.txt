@@ -1,0 +1,9 @@
+// Assuming you fetch from /app/Workout/
+fetch('/app/Workout/')
+  .then(res => res.json())
+  .then(data => {
+    data.workouts.forEach(plan => {
+      // Render each plan as a card or section
+      // plan.name, plan.description, plan.schedule
+    });
+  });
