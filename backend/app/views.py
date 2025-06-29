@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import User_details
 from .serializers import UserDetailsSerializer
+from .ml_utils import DietRecommendationModel
 import json
 
 User = get_user_model()
@@ -18,7 +19,6 @@ def signup_view(request):
     username = data.get('username')
     email = data.get('email')
     password = data.get('password')
-    is_premium_user = data.get('isPremiumUser', False)
 
     if not username or not email or not password:
         return Response({'status': 'error', 'message': 'Missing required fields'}, status=400)
@@ -28,7 +28,6 @@ def signup_view(request):
             username=username,
             email=email,
             password=password,
-            isPremiumUser=is_premium_user,
             is_superuser=False,
             is_staff=False
         )
@@ -61,7 +60,6 @@ def login_view(request):
             'status': 'success',
             'username': user.username,
             'email': user.email,
-            'isPremiumUser': getattr(user, 'isPremiumUser', False),
             'access_token': str(refresh.access_token),
             'refresh_token': str(refresh)
         })
@@ -70,28 +68,60 @@ def login_view(request):
 
 @api_view(['GET', 'POST'])
 def user_list_create(request):
+    
+    if request.method == 'GET':
+        users = User_details.objects.all()
+        serializer = UserDetailsSerializer(users, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
-    # Handle POST request (create user)
-    if request.method == 'POST':
+    elif request.method == 'POST':
         serializer = UserDetailsSerializer(data=request.data)
-        print(request.data['username'])
+        print(request.data.get('username'))
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         print(serializer.errors)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+
 @api_view(['GET', 'POST'])
 def user_fetch(request):
     username = request.data['username']
     if username:
-        user = User_details.objects.filter(username = username)
+        user = User_details.objects.filter(username=username)
         serializer = UserDetailsSerializer(user, many=True)
-        print("s data : ",serializer.data)
+        print("s data : ", serializer.data)
         return Response(serializer.data)
 
 
 
+@csrf_exempt
+@api_view(['POST'])
+def predict(request):
+    if request.method == 'POST':
+        try:
+            # Parse JSON data from the request body
+            data = json.loads(request.body)
+            BMI = float(data['BMI'])
+            BMR = float(data['BMR'])
+            Total_Calories = float(data['Total_Calories'])
+            veg_only = float(bool(data.get('veg_only', False)))
+            '''BMI = float(request.data.get('BMI', 0))
+            BMR = float(request.data.get('BMR', 0))
+            Total_Calories = float(request.data.get('Total_Calories', 0))
+            veg_only = bool(request.data.get('veg_only'))'''
+            model=DietRecommendationModel()
+            # Get diet recommendation based on the input data
+            recommendation =model.recommend_diet(BMI, BMR, Total_Calories, veg_only)
+            
+            return JsonResponse(recommendation, safe=False)
+           # return Response(recommendation, status=status.HTTP_200_OK)
+
+        except (KeyError, json.JSONDecodeError) as e:
+            # Handle cases where data is missing or not properly formatted
+            return JsonResponse({'error': str(e)}, status=400)
+    else:
+        return JsonResponse({'error': 'Invalid request method.'}, status=405)
 
 
 
