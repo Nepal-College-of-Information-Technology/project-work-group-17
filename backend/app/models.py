@@ -38,4 +38,21 @@ class User_details(models.Model):
     bmi = models.DecimalField(decimal_places=2 , max_digits=1000)
     bmr = models.DecimalField(decimal_places=2 , max_digits=1000)
     food_type = models.CharField(max_length=255)
-    
+
+class WorkoutPlan(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+
+class WorkoutSchedule(models.Model):
+    plan = models.ForeignKey(WorkoutPlan, related_name='schedule', on_delete=models.CASCADE)
+    day = models.IntegerField()
+    workout = models.CharField(max_length=255)
+
+class Exercise(models.Model):
+    name = models.CharField(max_length=255)
+    type = models.CharField(max_length=50)
+    equipment = models.CharField(max_length=255)
+    muscle_group = models.CharField(max_length=50)
+    image_url = models.TextField(null=True, blank=True)  # Add this line
+  # e.g. 'chest', 'triceps', etc.
+

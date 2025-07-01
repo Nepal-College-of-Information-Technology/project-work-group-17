@@ -1,7 +1,7 @@
 # serializers.py
 from rest_framework import serializers
 from django.contrib.auth import authenticate
-from .models import User
+from .models import User, WorkoutPlan, WorkoutSchedule, Exercise
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -35,3 +35,19 @@ class UserDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = User_details
         fields = '__all__'
+
+class WorkoutScheduleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WorkoutSchedule
+        fields = ['day', 'workout']
+
+class WorkoutPlanSerializer(serializers.ModelSerializer):
+    schedule = WorkoutScheduleSerializer(many=True, read_only=True)
+    class Meta:
+        model = WorkoutPlan
+        fields = ['id', 'name', 'description', 'schedule']
+
+class ExerciseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Exercise
+        fields = ['id', 'name', 'type', 'equipment', 'muscle_group', 'image_url']
