@@ -1,3 +1,5 @@
+
+workout render garda 
 // Assuming you fetch from /app/Workout/
 fetch('/app/Workout/')
   .then(res => res.json())
@@ -7,3 +9,4 @@ fetch('/app/Workout/')
       // plan.name, plan.description, plan.schedule
     });
   });
+
