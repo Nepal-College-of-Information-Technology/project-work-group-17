@@ -6,8 +6,6 @@ A smart, responsive **personal fitness web app**. It helps users:
 ✅ Calculate BMI based on height & weight  
 ✅ Browse and select workout plans  
 ✅ Browse and select meal plans  
-✅ Log weekly weight progress  
-✅ Visualize weight progress with charts  
 
 ---
 
@@ -123,19 +121,6 @@ python manage.py migrate
 python manage.py runserver  # Runs on http://localhost:8000
 ```
 
----
-
-## 🛠️ API Endpoints
-
-| Endpoint         | Method   | Description              |
-|------------------|----------|--------------------------|
-| /api/workouts/   | GET      | List all workout plans   |
-| /api/meals/      | GET      | List all meal plans      |
-| /api/progress/   | GET      | User's weight progress   |
-| /api/progress/   | POST     | Add new progress entry   |
-| /api/user/       | GET/POST | User data (BMI info)     |
-
----
 
 ## 🏗️ Technology Stack
 
