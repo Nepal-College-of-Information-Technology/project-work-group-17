@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'app',  # Your app name
-    'corsheaders',  # If you are using CORS headers
-    'backend',  # Your backend app
+    'app',  
+    'corsheaders',
+    'backend', 
+    'custom',  
 ]
 
 MIDDLEWARE = [

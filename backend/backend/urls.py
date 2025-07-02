@@ -23,4 +23,5 @@ urlpatterns = [
     path('app/',include('app.urls')),
     path('',welcome_view,name="welcome_view"),
     path('health/',health_check, name='health_check'),
+    path('custom/', include('custom.urls')),
 ]
