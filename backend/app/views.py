@@ -193,3 +193,5 @@ def abs(request):
     serializer = ExerciseSerializer(exercises, many=True)
     return Response({'abs_exercises': serializer.data})
 
+
+
