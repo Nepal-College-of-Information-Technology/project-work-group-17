@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from .views import welcome_view,health_check
+from chatbot.views import get_chatbot_response
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,7 @@ urlpatterns = [
     path('',welcome_view,name="welcome_view"),
     path('health/',health_check, name='health_check'),
     path('custom/', include('custom.urls')),
+    path('chatbot/', get_chatbot_response, name='chatbot-response'),
+
+
 ]
