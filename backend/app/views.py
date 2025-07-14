@@ -179,13 +179,13 @@ def back(request):
 def shoulders(request):
     exercises = Exercise.objects.filter(muscle_group='shoulders')
     serializer = ExerciseSerializer(exercises, many=True)
-    return Response({'shoulder_exercises': serializer.data})
+    return Response({'shoulders_exercises': serializer.data})
 
 @api_view(['GET'])
 def legs(request):
     exercises = Exercise.objects.filter(muscle_group='legs')
     serializer = ExerciseSerializer(exercises, many=True)
-    return Response({'leg_exercises': serializer.data})
+    return Response({'legs_exercises': serializer.data})
 
 @api_view(['GET'])
 def abs(request):
