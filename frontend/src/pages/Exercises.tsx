@@ -11,6 +11,11 @@ interface Exercise {
    equipment: string;
    muscle_group: string;
    image_url: string;
+   instructions?: string;
+   difficulty?: string;
+   duration?: string;
+   primary_muscles?: string;
+   secondary_muscles?: string;
 }
 
 const Exercises: React.FC = () => {
@@ -34,7 +39,9 @@ const Exercises: React.FC = () => {
       setLoading(true);
       setError("");
       try {
+         console.log(`Fetching exercises for: ${muscleGroup}`); // Debug log
          const response = await API.get(`${muscleGroup}/`);
+         console.log(`API Response for ${muscleGroup}:`, response.data); // Debug log
          const data = response.data;
 
          // Handle different possible response structures
@@ -45,11 +52,12 @@ const Exercises: React.FC = () => {
          } else if (data[`${muscleGroup}_exercises`]) {
             setExercises(data[`${muscleGroup}_exercises`]);
          } else {
+            console.log('No exercises found in response structure:', data); // Debug log
             setExercises([]);
          }
       } catch (err) {
+         console.error(`Error fetching ${muscleGroup} exercises:`, err); // Debug log
          setError(`Failed to load ${muscleGroup} exercises`);
-         console.error(err);
          setExercises([]);
       } finally {
          setLoading(false);
@@ -172,7 +180,7 @@ const Exercises: React.FC = () => {
                         <div className="h-48 bg-gray-700 overflow-hidden">
                            {exercise.image_url ? (
                               <img
-                                 src={`http://localhost:8000/static/${exercise.image_url}`}
+                                 src={`http://127.0.0.1:8000/static/${exercise.image_url}`}
                                  alt={exercise.name}
                                  className="w-full h-full object-cover"
                                  onError={(e) => {
