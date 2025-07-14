@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calculator, Scale, Ruler, TrendingUp } from 'lucide-react';
@@ -26,10 +25,15 @@ const BMI: React.FC = () => {
     setLoading(true);
     setError('');
     
+    console.log('Submitting BMI data:', formData); // Debug log
+    
     try {
       const response = await calculateBMI(formData);
+      console.log('BMI API Response:', response); // Debug log
+      console.log('BMI API Response Data:', response.data); // Debug log
       setResult(response.data);
     } catch (err) {
+      console.error('BMI calculation error:', err); // Debug log
       setError('Failed to calculate BMI. Please try again.');
     } finally {
       setLoading(false);
