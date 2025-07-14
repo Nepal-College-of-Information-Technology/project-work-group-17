@@ -60,7 +60,7 @@ Developed with **Django REST Framework**, the backend handles business logic, us
 Stores user data, workout schedules, diet plans, and other application data. Initially using **SQLite** for simplicity, but can be migrated to more scalable databases like **PostgreSQL** in production.
 
 ### Cloud Services
-Hosted on **AWS**, leveraging services like **EC2** or **Lambda** for backend hosting, **S3** for static file storage, **API Gateway** for routing, and **CodePipeline** for CI/CD automation. Monitoring and logging are managed using **CloudWatch**.
+Hosted on **AWS**, leveraging services like **EC2** for backend hosting.
 
 
 ---
@@ -100,7 +100,7 @@ BMI calculation, personalized workout schedules, diet recommendations, and detai
 Managing seamless integration between frontend and backend, ensuring low latency responses, and handling real-time updates without complex infrastructure.
 
 > Solutions Adopted:
-Used AWS Lambda with API Gateway to implement backend logic for automatic scaling and cost efficiency. React frontend consumes APIs for smooth user interaction.
+React frontend consumes APIs for smooth user interaction.
 
 > Key Decisions:
 Chose AWS Lambda over EC2 to avoid server maintenance and leverage pay-per-use pricing, enabling a scalable, cost-effective backend.
