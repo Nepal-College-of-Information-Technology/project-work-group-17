@@ -65,7 +65,7 @@ const Register: React.FC = () => {
             <UserPlus className="h-8 w-8 text-white" />
           </div>
           <h2 className="text-3xl font-bold text-white">Create Your Account</h2>
-          <p className="mt-2 text-gray-400">Join the FitPro community today</p>
+          <p className="mt-2 text-gray-400">Join the Byayamshala community today</p>
         </div>
 
         <div className="bg-gray-800 rounded-xl p-8">
