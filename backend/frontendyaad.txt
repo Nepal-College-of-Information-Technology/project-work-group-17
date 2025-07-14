@@ -10,3 +10,7 @@ fetch('/app/Workout/')
     });
   });
 
+chatbot use garne bela pahile install python 3.11 too 
+python3.11 -m venv venv
+source venv/bin/activate   # or venv\Scripts\activate on Windows
+pip install -r requirements.txt

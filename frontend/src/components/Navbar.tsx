@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
             >
               <Dumbbell className="h-8 w-8 text-orange-500" />
             </motion.div>
-            <span className="text-xl font-bold text-white">FitPro</span>
+            <span className="text-xl font-bold text-white">Byayamshala</span>
           </Link>
 
           {/* Desktop Navigation */}
