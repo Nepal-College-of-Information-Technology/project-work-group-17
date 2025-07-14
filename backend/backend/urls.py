@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 from .views import welcome_view,health_check
 from chatbot.views import get_chatbot_response
 
@@ -27,6 +29,8 @@ urlpatterns = [
     path('health/',health_check, name='health_check'),
     path('custom/', include('custom.urls')),
     path('chatbot/', get_chatbot_response, name='chatbot-response'),
-
-
 ]
+
+# Serve static files during development
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
